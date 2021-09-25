@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		9A0BD10626F8B045000B7112 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A0BD10426F8B045000B7112 /* Main.storyboard */; };
 		9A0BD10826F8B047000B7112 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A0BD10726F8B047000B7112 /* Assets.xcassets */; };
 		9A0BD10B26F8B047000B7112 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A0BD10926F8B047000B7112 /* LaunchScreen.storyboard */; };
+		9A1D2F3726FF2AA3004D90B8 /* AddNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1D2F3626FF2AA3004D90B8 /* AddNotesViewController.swift */; };
+		9A4F5EFC26FBF51200C644E9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9A4F5EFB26FBF51200C644E9 /* Alamofire */; };
+		9A4F5EFE26FBF54F00C644E9 /* ApiFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4F5EFD26FBF54E00C644E9 /* ApiFuncs.swift */; };
+		9A4F5F0026FBFD5800C644E9 /* ViewController.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4F5EFF26FBFD5800C644E9 /* ViewController.extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,9 @@
 		9A0BD10726F8B047000B7112 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A0BD10A26F8B047000B7112 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A0BD10C26F8B047000B7112 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A1D2F3626FF2AA3004D90B8 /* AddNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotesViewController.swift; sourceTree = "<group>"; };
+		9A4F5EFD26FBF54E00C644E9 /* ApiFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiFuncs.swift; sourceTree = "<group>"; };
+		9A4F5EFF26FBFD5800C644E9 /* ViewController.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A4F5EFC26FBF51200C644E9 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +64,9 @@
 		9A0BD0FD26F8B045000B7112 /* FullStack-ToDo */ = {
 			isa = PBXGroup;
 			children = (
+				9A1D2F3626FF2AA3004D90B8 /* AddNotesViewController.swift */,
+				9A4F5EFF26FBFD5800C644E9 /* ViewController.extension.swift */,
+				9A4F5EFD26FBF54E00C644E9 /* ApiFuncs.swift */,
 				9A0BD0FE26F8B045000B7112 /* AppDelegate.swift */,
 				9A0BD10026F8B045000B7112 /* SceneDelegate.swift */,
 				9A0BD10226F8B045000B7112 /* ViewController.swift */,
@@ -83,6 +94,9 @@
 			dependencies = (
 			);
 			name = "FullStack-ToDo";
+			packageProductDependencies = (
+				9A4F5EFB26FBF51200C644E9 /* Alamofire */,
+			);
 			productName = "FullStack-ToDo";
 			productReference = 9A0BD0FB26F8B045000B7112 /* FullStack-ToDo.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +124,9 @@
 				Base,
 			);
 			mainGroup = 9A0BD0F226F8B045000B7112;
+			packageReferences = (
+				9A4F5EFA26FBF51200C644E9 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 9A0BD0FC26F8B045000B7112 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +156,9 @@
 			files = (
 				9A0BD10326F8B045000B7112 /* ViewController.swift in Sources */,
 				9A0BD0FF26F8B045000B7112 /* AppDelegate.swift in Sources */,
+				9A1D2F3726FF2AA3004D90B8 /* AddNotesViewController.swift in Sources */,
+				9A4F5EFE26FBF54F00C644E9 /* ApiFuncs.swift in Sources */,
+				9A4F5F0026FBFD5800C644E9 /* ViewController.extension.swift in Sources */,
 				9A0BD10126F8B045000B7112 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +361,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9A4F5EFA26FBF51200C644E9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9A4F5EFB26FBF51200C644E9 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9A4F5EFA26FBF51200C644E9 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9A0BD0F326F8B045000B7112 /* Project object */;
 }
